@@ -23,7 +23,16 @@ class Database {
         return $result;
     }
 
-    public function insert($sql){
+    public function getOne($sql){
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        // $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        // return $result[0];
+        $result = $stmt->fetch();
+        return $result;
+    }
+
+    public function exec($sql){
         $stmt = $this->conn->prepare($sql);
         $stmt->execute();
         // $this->conn->exec($sql);

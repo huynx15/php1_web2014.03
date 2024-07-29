@@ -28,7 +28,10 @@
                 </td>
                 <td><?= $pro['name'];?></td>
                 <td><?= $pro['price'];?></td>
-                <td></td>
+                <td>
+                    <a href="<?= BASE_DIR?>?act=edit-product&id=<?= $pro['id'];?>">Edit</a>
+                    <a href="<?= BASE_DIR?>?act=del-product&id=<?= $pro['id'];?>" onclick="return confirm('Bạn có muốn xóa không?');">Delete</a>
+                </td>
             </tr>
         <?php }?>
     </table>

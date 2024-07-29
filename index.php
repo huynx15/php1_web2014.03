@@ -16,4 +16,6 @@
         '/' => $home->home(),
         'product-list' => $product->list(),
         'add-product'=> $product->add(),
+        'edit-product'=> $product->edit(),
+        'del-product'=> $product->delete(),
     };
